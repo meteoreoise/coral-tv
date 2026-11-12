@@ -77,5 +77,6 @@ Result: screen renders as expected; console log shows GS screen 640x448
 | Date | Scope | Environment | Result |
 |---|---|---|---|
 | 2026-11-13 | Build | ps2dev image, GCC 15.2.0 | Valid ELF produced, no warnings |
+| 2026-11-13 | Build (CI) | GitHub Actions run 43332246006 | Success, `coral-tv-elf` artifact uploaded |
 | — | PCSX2 | — | Not tested yet |
 | — | Hardware | — | Not tested yet |
