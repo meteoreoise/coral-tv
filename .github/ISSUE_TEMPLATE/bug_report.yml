@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a reproducible problem with CORAL TV
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please include evidence (logs, screenshots) and state clearly whether the issue happens in PCSX2, on real hardware, or both.
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - PCSX2 only
+        - Real PS2 only
+        - Both PCSX2 and real PS2
+    validations:
+      required: true
+  - type: input
+    id: pcsx2-version
+    attributes:
+      label: PCSX2 version and renderer (if applicable)
+      placeholder: "PCSX2 2.2.0, Vulkan"
+  - type: input
+    id: scph
+    attributes:
+      label: PS2 model (if applicable)
+      placeholder: "SCPH-90004"
+  - type: input
+    id: boot-method
+    attributes:
+      label: Homebrew boot method (if applicable)
+      placeholder: "FreeMcBoot + uLaunchELF, USB drive"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Boot coral-tv.elf
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste console output (lines starting with [CORAL]) or attach images.
+  - type: input
+    id: version
+    attributes:
+      label: CORAL TV version / commit
+      placeholder: "v0.1.0-dev or commit SHA"

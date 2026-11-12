@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a feature that fits PS2 hardware limits
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CORAL TV targets real PS2 hardware (32MB RAM). Requests that assume Android, APK support, or modern streaming services cannot be accepted as-is. Explain how the feature works within PS2SDK/gsKit limits.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should it work with a DualShock 2 only?
+    validations:
+      required: true
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical considerations
+      description: Which PS2SDK/gsKit APIs or libraries could implement it? What are the memory/performance costs?
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Related roadmap phase
+      options:
+        - Phase 2 - Graphics
+        - Phase 3 - Input
+        - Phase 4 - Main UI sections
+        - Phase 5 - Apps and ELF launcher
+        - Phase 6 - Storage and file manager
+        - Phase 7 - Media and settings
+        - Not listed

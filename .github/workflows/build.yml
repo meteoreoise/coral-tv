@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-elf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build with PS2SDK
+        run: |
+          docker run --rm \
+            -v "$PWD:/src" \
+            -w /src \
+            ghcr.io/ps2dev/ps2dev:latest \
+            sh -c "apk add --no-cache make >/dev/null && make"
+
+      - name: Upload ELF
+        uses: actions/upload-artifact@v4
+        with:
+          name: coral-tv-elf
+          path: coral-tv.elf
+          if-no-files-found: error

@@ -1,0 +1,24 @@
+# Build output
+*.o
+*.a
+*.elf
+*.irx
+build/
+
+# Disc images and dumps (never commit copyrighted content)
+*.iso
+*.bin
+*.cue
+*.img
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local test artifacts
+logs/
+*.log
+pcsx2/

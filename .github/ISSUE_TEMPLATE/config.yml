@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Build and testing documentation
+    url: https://github.com/meteoreoise/coral-tv/blob/main/docs/BUILD.md
+    about: Read the build and testing instructions before reporting a setup problem.
+  - name: Roadmap
+    url: https://github.com/meteoreoise/coral-tv/blob/main/docs/ROADMAP.md
+    about: Check what is planned and what has already been implemented.
